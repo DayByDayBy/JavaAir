@@ -45,18 +45,24 @@ public class FlightManagerTest {
     public void canCalculateCheckedBaggage(){
         fastballExpress.addPassenger(passenger);
         assertEquals(45, fastballExpress.getManifest().size() * passenger.getBaggage(), 0.0);
-
-
-
     }
 
     @Test
     public void canCalculateRemainingBaggageWeight(){
-        assertEquals(75, plane.getTotalBaggageLimit() - passenger.getBaggage(), 0.0);
-
+        fastballExpress.addPassenger(passenger);
+        assertEquals(
+                75,
+                plane.getTotalBaggageLimit() - (passenger.getBaggage() * fastballExpress.getManifest().size()),
+                0.0);
         }
 }
 
 
 
+// this is all very basic, would be better if it was a bigger manifest than one.
+// and the test above is just removing a passenger bag from the total, not removing
+// a manifest size * bags, which i think would be cleaner/better
 
+
+// okay, disregard above, have now updated it
+// leaving the comments to remind me of the iteration if i come back to it later
