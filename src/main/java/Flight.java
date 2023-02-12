@@ -3,7 +3,7 @@ import java.util.Collection;
 
 public class Flight {
 
-    private String flightNumber;
+    String flightNumber;
     private Plane plane;
     private String destination;
     private String departureAirport;
@@ -11,6 +11,7 @@ public class Flight {
     private Pilot pilot;
     private ArrayList<CabinCrewMember> crewList;
     private ArrayList<Passenger> manifest;
+
     double baggageAllowance;
     double bookedWeight;
     double weightRemaining;
@@ -27,7 +28,6 @@ public class Flight {
              double baggageAllowance,
              double bookedWeight,
              double weightRemaining)
-
     {
         this.flightNumber = flightNumber;
         this.plane = plane;
@@ -56,6 +56,8 @@ public class Flight {
     public void addPassenger(Passenger passenger) {
         if (manifest.size() < this.plane.getSeats()){
             manifest.add(passenger);
+            passenger.setFlightNumber(flightNumber);
+            Passenger.setSeatNumber();
         }
     }
 

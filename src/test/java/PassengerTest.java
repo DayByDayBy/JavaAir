@@ -11,14 +11,14 @@ public class PassengerTest {
 
     @Before
     public void setup(){
-        passenger1 =  new Passenger("Gary", 45);
-        passenger2 =  new Passenger("Lisa", 45);
-        passenger3 =  new Passenger("Helen", 45);
+        passenger1 =  new Passenger("Gary", 45, "", null);
+        passenger2 =  new Passenger("Lisa", 45,"", null);
+        passenger3 =  new Passenger("Helen", 45,"", null);
     }
 
     @Test
     public void passengerHasName(){
         assertEquals("Lisa", passenger2.getName());
-
     }
+
 }

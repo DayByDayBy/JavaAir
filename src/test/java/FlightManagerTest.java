@@ -1,3 +1,4 @@
+import Rank;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,7 +23,7 @@ public class FlightManagerTest {
         ArrayList<Passenger> manifest = new ArrayList<>();
         pilot = new Pilot("Laura Kinney", Rank.CAPTAIN, "X23");
         plane = new Plane(PlaneType.CESSNA);
-        passenger = new Passenger("Bobby Drake", 45);
+        passenger = new Passenger("Bobby Drake", 45, "", null);
         fastballExpress = new Flight(
                 "616",
                 plane,

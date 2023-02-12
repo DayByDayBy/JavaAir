@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collection;
-
 public class FlightManager {
 
     private double bookedWeight;

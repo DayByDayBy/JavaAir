@@ -1,10 +1,10 @@
+import Rank;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-
 
 
 public class FlightTest {
@@ -14,7 +14,6 @@ public class FlightTest {
     private Plane plane;
     private Flight flight;
     private Passenger passenger;
-
     private double baggageAllowance;
     private double bookedWeight;
     private double weightRemaining;
@@ -41,7 +40,7 @@ public class FlightTest {
                 bookedWeight,
                 weightRemaining);
 
-        passenger = new Passenger("Jean", 40);
+        passenger = new Passenger("Jean", 40, "", null);
     }
 
     @Test
@@ -59,6 +58,20 @@ public class FlightTest {
         flight.addPassenger(passenger);
         assertEquals(1, flight.getManifest().size());
     }
+    @Test
+    public void checkPassengerHasAFlight(){
+        flight.addPassenger(passenger);
+        assertEquals("BA666", passenger.flightNumber);
+    }
+    @Test
+    public void checkPassengerHasASeat(){
+        flight.addPassenger(passenger);
+        assertEquals(false, Passenger.setSeatNumber());
+    }
+
+
+
+
 
 
 }

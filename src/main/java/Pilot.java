@@ -1,3 +1,5 @@
+import Rank;
+
 public class Pilot  {
 
     private String name;
