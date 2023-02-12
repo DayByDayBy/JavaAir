@@ -23,7 +23,7 @@ public class PlaneTest {
 
     @Test
     public void checkPlaneHasCargoLimit(){
-        assertEquals(6123, plane3.getCargoLimit());
+        assertEquals(6124, PlaneType.NIMROD.getCargoLimit());
 
     }
 

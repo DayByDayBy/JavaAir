@@ -15,13 +15,16 @@ public class FlightTest {
     private Flight flight;
     private Passenger passenger;
 
+    private double baggageAllowance;
+    private double bookedWeight;
+    private double weightRemaining;
+
 
     @Before
     public void setup(){
 
         ArrayList<CabinCrewMember> crewList = new ArrayList<>();
         ArrayList<Passenger> manifest = new ArrayList<>();
-
 
         pilot =  new Pilot("Jules", Rank.CAPTAIN, "A113");
         plane =  new Plane(PlaneType.BOEING747);
@@ -33,8 +36,12 @@ public class FlightTest {
                 "2358",
                 pilot,
                 crewList,
-                manifest);
-        passenger = new Passenger("Jean");
+                manifest,
+                baggageAllowance,
+                bookedWeight,
+                weightRemaining);
+
+        passenger = new Passenger("Jean", 40);
     }
 
     @Test

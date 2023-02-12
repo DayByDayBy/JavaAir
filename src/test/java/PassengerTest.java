@@ -11,9 +11,9 @@ public class PassengerTest {
 
     @Before
     public void setup(){
-        passenger1 =  new Passenger("Gary");
-        passenger2 =  new Passenger("Lisa");
-        passenger3 =  new Passenger("Helen");
+        passenger1 =  new Passenger("Gary", 45);
+        passenger2 =  new Passenger("Lisa", 45);
+        passenger3 =  new Passenger("Helen", 45);
     }
 
     @Test

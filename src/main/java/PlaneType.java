@@ -3,7 +3,6 @@ public enum PlaneType {
     BOEING747(416, 66560),
     AIRBUSA350(300, 48000),
     NIMROD (13, 6124),
-
     CESSNA(2, 240);
 
     private final int seats;
@@ -20,6 +19,7 @@ public enum PlaneType {
     public int getCargoLimit(){
         return this.cargoLimit;
     }
+
 
 
 }

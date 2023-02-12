@@ -4,7 +4,6 @@ import java.util.Collection;
 public class Flight {
 
     private String flightNumber;
-
     private Plane plane;
     private String destination;
     private String departureAirport;
@@ -12,6 +11,9 @@ public class Flight {
     private Pilot pilot;
     private ArrayList<CabinCrewMember> crewList;
     private ArrayList<Passenger> manifest;
+    double baggageAllowance;
+    double bookedWeight;
+    double weightRemaining;
 
     public Flight
             (String flightNumber,
@@ -21,7 +23,11 @@ public class Flight {
              String departureTime,
              Pilot pilot,
              ArrayList<CabinCrewMember> crewList,
-             ArrayList<Passenger> manifest)
+             ArrayList<Passenger> manifest,
+             double baggageAllowance,
+             double bookedWeight,
+             double weightRemaining)
+
     {
         this.flightNumber = flightNumber;
         this.plane = plane;
@@ -31,6 +37,9 @@ public class Flight {
         this.pilot = pilot;
         this.crewList = crewList;
         this.manifest = manifest;
+        this.baggageAllowance = baggageAllowance;
+        this.bookedWeight = bookedWeight;
+        this.weightRemaining = weightRemaining;
     }
 
 
@@ -56,4 +65,11 @@ public class Flight {
     public Collection<Passenger> getManifest() {
         return this.manifest;
     }
+
+
+
+
+
+
+
 }
